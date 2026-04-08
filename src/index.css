@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0f0f0f;
+    color: #e5e7eb;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .btn-primary {
+    @apply bg-rose-600 hover:bg-rose-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-rose-500/25;
+  }
+  .btn-outline {
+    @apply border border-zinc-700 hover:border-zinc-500 text-gray-300 hover:text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-200;
+  }
+  .card-dark {
+    @apply bg-zinc-900 border border-zinc-800 rounded-2xl;
+  }
+  .section-tag {
+    @apply text-xs font-bold tracking-widest uppercase text-rose-500;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-extrabold text-white leading-tight;
+  }
+  .section-subtitle {
+    @apply text-gray-400 text-base leading-relaxed;
+  }
 }
