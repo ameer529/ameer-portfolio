@@ -5,12 +5,12 @@ const highlights = [
   'Built HIPAA-compliant patient management platforms from scratch',
   'Designed secure, audited data models and access control systems',
   'Developed transaction processing systems for FinTech clients',
-  'Built high-traffic ad-serving pipelines in AdTech',
+  'Built high-traffic ad-serving pipelines in EdTech',
   'End-to-end ownership from database design to deployment',
   'Clean architecture with a focus on performance and reliability',
 ];
 
-const domains = ['Health Tech', 'HIPAA Compliance', 'FinTech', 'AdTech', 'SaaS', 'REST APIs'];
+const domains = ['Health Tech', 'HIPAA Compliance', 'FinTech', 'EdTech', 'SaaS', 'REST APIs'];
 
 const About = () => {
   return (
@@ -33,7 +33,7 @@ const About = () => {
             <p className="section-subtitle mb-4 text-sm leading-7">
               I'm a Senior Ruby on Rails Developer focused on result-driven projects.
               Throughout my career, I've worked on multiple products spanning health tech
-              (HIPAA compliant), fintech, and adtech — building systems that are secure,
+              (HIPAA compliant), fintech, and edtech — building systems that are secure,
               scalable, and compliant with industry regulations.
             </p>
             <p className="section-subtitle mb-6 text-sm leading-7">

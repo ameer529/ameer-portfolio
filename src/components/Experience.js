@@ -30,10 +30,10 @@ const experiences = [
   },
   {
     role: 'Backend Developer',
-    company: 'AdTech Company',
+    company: 'EdTech Company',
     period: '2019 – 2020',
     type: 'Full-Time',
-    domain: 'AdTech',
+    domain: 'EdTech',
     points: [
       'Built high-traffic ad-serving and click-tracking pipelines in Rails',
       'Handled large-scale event ingestion and analytics reporting dashboards',
@@ -45,7 +45,7 @@ const experiences = [
 const domainColors = {
   'Health Tech': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
   'FinTech': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
-  'AdTech': 'bg-violet-500/10 text-violet-400 border-violet-500/20',
+  'EdTech': 'bg-violet-500/10 text-violet-400 border-violet-500/20',
 };
 
 const Experience = () => {
