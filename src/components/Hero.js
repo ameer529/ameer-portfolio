@@ -71,6 +71,16 @@ const Hero = () => {
           <button className="btn-outline px-7 py-3 text-sm" onClick={() => scrollTo('experience')}>
             View Experience
           </button>
+          <a
+            href="/resume.pdf"
+            download="Ameer_Hamza_Resume.pdf"
+            className="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600 border border-gray-300 hover:border-indigo-300 px-7 py-3 rounded-lg transition-all duration-200 font-medium"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3" />
+            </svg>
+            Download Resume
+          </a>
         </div>
 
         {/* Social icons */}
