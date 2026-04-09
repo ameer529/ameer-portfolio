@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-indigo-900 shadow-lg shadow-indigo-900/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950 shadow-lg shadow-black/30">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           onClick={() => scrollTo('home')}
@@ -34,7 +34,7 @@ const Navbar = () => {
             <button
               key={link}
               onClick={() => scrollTo(link)}
-              className="text-sm text-indigo-200 hover:text-white transition-colors font-medium"
+              className="text-sm text-gray-300 hover:text-white transition-colors font-medium"
             >
               {link}
             </button>
@@ -58,12 +58,12 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-indigo-800 border-t border-indigo-700 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-gray-900 border-t border-gray-800 px-6 py-4 flex flex-col gap-4">
           {links.map((link) => (
             <button
               key={link}
               onClick={() => scrollTo(link)}
-              className="text-left text-indigo-200 hover:text-white py-1 text-base font-medium"
+              className="text-left text-gray-300 hover:text-white py-1 text-base font-medium"
             >
               {link}
             </button>
