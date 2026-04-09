@@ -97,7 +97,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="section-tag mb-3">Projects</p>
-          <h2 className="section-title mb-4">Things I've Built</h2>
+          <h2 className="section-title mb-4">Products I've Shipped</h2>
           <p className="section-subtitle max-w-lg mx-auto">
             A selection of real products I've contributed to or led across my career.
           </p>
