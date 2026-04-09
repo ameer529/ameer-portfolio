@@ -30,7 +30,7 @@ const About = () => {
           <div className="card p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-4">My Story</h3>
             <p className="text-gray-500 text-sm leading-7 mb-4">
-              I'm a Full-Stack Engineer with 4 years of hands-on experience in Ruby on Rails,
+              I'm a Full-Stack Engineer with 5 years of hands-on experience in Ruby on Rails,
               building and scaling web and mobile applications across FinTech and Health Tech domains.
               I've worked in both associate lead and senior engineering roles — owning products
               end-to-end from requirements gathering to production deployment.
