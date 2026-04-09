@@ -19,17 +19,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200'
-        : 'bg-white/80 backdrop-blur-sm'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-indigo-900 shadow-lg shadow-indigo-900/30">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           onClick={() => scrollTo('home')}
-          className="text-xl font-extrabold text-gray-900 hover:text-indigo-600 transition-colors"
+          className="text-xl font-extrabold text-white hover:text-indigo-200 transition-colors"
         >
-          Ameer<span className="text-rose-600">.</span>
+          Ameer<span className="text-rose-400">.</span>
         </button>
 
         {/* Desktop nav */}
@@ -38,19 +34,22 @@ const Navbar = () => {
             <button
               key={link}
               onClick={() => scrollTo(link)}
-              className="text-sm text-gray-500 hover:text-indigo-600 transition-colors font-medium"
+              className="text-sm text-indigo-200 hover:text-white transition-colors font-medium"
             >
               {link}
             </button>
           ))}
-          <a href="mailto:ameerhamza112281@gmail.com" className="btn-primary text-sm px-5 py-2">
+          <a
+            href="mailto:ameerhamza112281@gmail.com"
+            className="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-5 py-2 rounded-lg text-sm transition-all duration-200 hover:shadow-lg hover:shadow-rose-600/25 inline-block"
+          >
             Hire Me
           </a>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-gray-500 hover:text-gray-900 text-2xl"
+          className="md:hidden text-indigo-200 hover:text-white text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? '✕' : '☰'}
@@ -59,17 +58,20 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4 shadow-lg">
+        <div className="md:hidden bg-indigo-800 border-t border-indigo-700 px-6 py-4 flex flex-col gap-4">
           {links.map((link) => (
             <button
               key={link}
               onClick={() => scrollTo(link)}
-              className="text-left text-gray-600 hover:text-indigo-600 py-1 text-base font-medium"
+              className="text-left text-indigo-200 hover:text-white py-1 text-base font-medium"
             >
               {link}
             </button>
           ))}
-          <a href="mailto:ameerhamza112281@gmail.com" className="btn-primary text-center text-sm">
+          <a
+            href="mailto:ameerhamza112281@gmail.com"
+            className="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-5 py-2 rounded-lg text-sm text-center transition-all duration-200 inline-block"
+          >
             Hire Me
           </a>
         </div>
