@@ -2,47 +2,38 @@ import React from 'react';
 
 const experiences = [
   {
-    role: 'Senior Ruby on Rails Developer',
-    company: 'Health Tech Platform (HIPAA Compliant)',
-    period: '2022 – Present',
+    role: 'Sr. Software Engineer',
+    company: 'Socketier',
+    location: 'Faisalabad, Pakistan',
+    period: 'Apr 2025 – Present',
     domain: 'Health Tech',
     points: [
-      'Led backend development of a HIPAA-compliant patient management platform',
-      'Designed secure, audited data models and granular access control systems',
-      'Built and maintained RESTful APIs consumed by web and mobile clients',
-      'Implemented PHI data encryption, audit logging, and compliance workflows',
-      'Owned performance optimization including N+1 query fixes and caching strategies',
+      'Collaborated directly with TeamCare Dental\'s product team to translate business needs into scalable features',
+      'Developed new functionalities and improved existing modules in a Ruby on Rails monolith with Stimulus and Turbo',
+      'Diagnosed and resolved legacy system issues, improving platform stability and reducing reported bugs',
+      'Participated in daily stand-ups, sprint planning, and code reviews for efficient development cycles',
     ],
+    tech: ['Ruby on Rails', 'Sidekiq', 'CI/CD', 'AWS (EC2, S3)', 'Stimulus', 'Turbo'],
   },
   {
-    role: 'Ruby on Rails Developer',
-    company: 'FinTech Platform',
-    period: '2020 – 2022',
+    role: 'Sr. Software Engineer',
+    company: 'Techcreatix',
+    location: 'Lahore, Pakistan',
+    period: 'Jan 2021 – Apr 2025',
     domain: 'FinTech',
     points: [
-      'Developed transaction processing and reconciliation systems',
-      'Integrated third-party payment gateways and banking APIs',
-      'Built robust background job infrastructure using Sidekiq',
-      'Improved system reliability with comprehensive error handling and alerting',
+      'Served as Associate Lead for a team of 10, managing product development lifecycle from requirements to delivery',
+      'Led a team of 7 engineers (backend, iOS, Android) providing technical guidance and regular client updates',
+      'Improved code quality and team efficiency by implementing TDD and industry best practices',
+      'Designed custom Ruby Gems to manage shared code between web and mobile backends',
     ],
-  },
-  {
-    role: 'Backend Developer',
-    company: 'EdTech Company',
-    period: '2019 – 2020',
-    domain: 'EdTech',
-    points: [
-      'Built high-traffic ad-serving and click-tracking pipelines in Rails',
-      'Handled large-scale event ingestion and analytics reporting dashboards',
-      'Collaborated with frontend and data teams to deliver real-time analytics features',
-    ],
+    tech: ['Ruby on Rails', 'Sidekiq', 'Heroku', 'CI/CD', 'AWS (EC2, DynamoDB, API Gateway, Lambda)'],
   },
 ];
 
 const domainColors = {
   'Health Tech': 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  'FinTech':     'bg-blue-50 text-blue-700 border-blue-200',
-  'EdTech':      'bg-violet-50 text-violet-700 border-violet-200',
+  'FinTech': 'bg-blue-50 text-blue-700 border-blue-200',
 };
 
 const Experience = () => {
@@ -53,17 +44,15 @@ const Experience = () => {
           <p className="section-tag mb-3">Experience</p>
           <h2 className="section-title mb-4">Professional Journey</h2>
           <p className="section-subtitle max-w-lg mx-auto">
-            A track record of building production-grade systems across regulated industries.
+            5+ years building production-grade systems across regulated industries.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto relative">
-          {/* Timeline line */}
           <div className="absolute left-4 top-0 bottom-0 w-px bg-gray-200" />
 
           {experiences.map((exp, i) => (
             <div key={i} className="relative pl-12 mb-8 last:mb-0">
-              {/* Dot — ruby red to keep brand */}
               <div className="absolute left-0 top-6 w-8 h-8 bg-rose-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md shadow-rose-200">
                 {i + 1}
               </div>
@@ -72,7 +61,8 @@ const Experience = () => {
                 <div className="flex flex-wrap justify-between items-start gap-3 mb-4">
                   <div>
                     <h3 className="text-base font-bold text-gray-900 mb-0.5">{exp.role}</h3>
-                    <p className="text-indigo-600 text-sm font-medium">{exp.company}</p>
+                    <p className="text-indigo-600 text-sm font-semibold">{exp.company}</p>
+                    <p className="text-xs text-gray-400">{exp.location}</p>
                   </div>
                   <div className="flex flex-col items-end gap-1.5">
                     <span className={`text-xs font-semibold px-2.5 py-1 rounded border ${domainColors[exp.domain]}`}>
@@ -82,7 +72,7 @@ const Experience = () => {
                   </div>
                 </div>
 
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {exp.points.map((point, j) => (
                     <li key={j} className="flex items-start gap-2 text-gray-500 text-sm">
                       <span className="text-indigo-400 mt-1 flex-shrink-0">›</span>
@@ -90,6 +80,14 @@ const Experience = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-gray-100">
+                  {exp.tech.map((t) => (
+                    <span key={t} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded font-medium">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
