@@ -59,7 +59,7 @@ const Hero = () => {
           Full-Stack Engineer with <span className="text-gray-800 font-semibold">5 years of experience</span> in Ruby on Rails
           building scalable web applications. Ambitious, detail-oriented, and an effective communicator
           across <span className="text-gray-800 font-semibold">FinTech</span>,{' '}
-          <span className="text-gray-800 font-semibold">Dental Tech</span>, and{' '}
+          <span className="text-gray-800 font-semibold">Health Tech</span>, and{' '}
           <span className="text-gray-800 font-semibold">SaaS</span> products.
         </p>
 
