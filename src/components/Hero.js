@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="h-px w-12 bg-gray-300" />
           <p className="text-gray-500 text-lg md:text-xl font-medium tracking-wide">
-            Senior Ruby on Rails Developer
+            Senior Software Engineer
           </p>
           <div className="h-px w-12 bg-gray-300" />
         </div>
