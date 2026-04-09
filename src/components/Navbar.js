@@ -10,7 +10,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const links = ['About', 'Skills', 'Experience', 'Contact'];
+  const links = ['About', 'Skills', 'Experience', 'Projects', 'Contact'];
 
   const scrollTo = (id) => {
     setMenuOpen(false);

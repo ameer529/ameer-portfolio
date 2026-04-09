@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaGem, FaGithub, FaDatabase, FaServer, FaTools, FaProjectDiagram } from 'react-icons/fa';
-import { SiPostgresql, SiJira, SiPostman, SiClickup } from 'react-icons/si';
+import { FaGem, FaGithub, FaDatabase, FaServer, FaCloud, FaJs } from 'react-icons/fa';
+import { SiPostgresql, SiSidekiq, SiHeroku, SiTurbo, SiHotwire } from 'react-icons/si';
 
 const skills = [
   {
@@ -8,24 +8,27 @@ const skills = [
     items: [
       { name: 'Ruby on Rails', icon: <FaGem className="text-rose-600" />, level: 'Expert' },
       { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" />, level: 'Expert' },
-      { name: 'SQL', icon: <FaDatabase className="text-amber-500" />, level: 'Advanced' },
+      { name: 'JavaScript', icon: <FaJs className="text-yellow-400" />, level: 'Advanced' },
       { name: 'REST APIs', icon: <FaServer className="text-emerald-500" />, level: 'Expert' },
     ],
   },
   {
-    category: 'Tools & Workflow',
+    category: 'Frontend & Realtime',
     items: [
-      { name: 'GitHub', icon: <FaGithub className="text-gray-700" />, level: 'Advanced' },
-      { name: 'Jira', icon: <SiJira className="text-blue-600" />, level: 'Advanced' },
-      { name: 'ClickUp', icon: <SiClickup className="text-violet-600" />, level: 'Advanced' },
-      { name: 'Postman', icon: <SiPostman className="text-orange-500" />, level: 'Advanced' },
+      { name: 'Stimulus', icon: <FaJs className="text-sky-500" />, level: 'Advanced' },
+      { name: 'Turbo', icon: <SiTurbo className="text-orange-500" />, level: 'Advanced' },
+      { name: 'Hotwire', icon: <SiHotwire className="text-red-500" />, level: 'Advanced' },
     ],
   },
   {
-    category: 'Infrastructure',
+    category: 'Infrastructure & Tools',
     items: [
-      { name: 'DevOps', icon: <FaTools className="text-gray-500" />, level: 'Intermediate' },
-      { name: 'Architecture', icon: <FaProjectDiagram className="text-indigo-500" />, level: 'Advanced' },
+      { name: 'AWS', icon: <FaCloud className="text-amber-500" />, level: 'Advanced' },
+      { name: 'Sidekiq', icon: <SiSidekiq className="text-red-600" />, level: 'Expert' },
+      { name: 'Heroku', icon: <SiHeroku className="text-violet-500" />, level: 'Advanced' },
+      { name: 'CI/CD', icon: <FaCloud className="text-gray-500" />, level: 'Advanced' },
+      { name: 'GitHub', icon: <FaGithub className="text-gray-700" />, level: 'Advanced' },
+      { name: 'Kimurai', icon: <FaDatabase className="text-green-600" />, level: 'Intermediate' },
     ],
   },
 ];
@@ -44,7 +47,7 @@ const Skills = () => {
           <p className="section-tag mb-3">Technical Skills</p>
           <h2 className="section-title mb-4">Tools & Technologies</h2>
           <p className="section-subtitle max-w-lg mx-auto">
-            The core stack I rely on to build reliable, production-grade applications.
+            The stack I've used in production across multiple companies and products.
           </p>
         </div>
 
@@ -54,7 +57,7 @@ const Skills = () => {
               <h3 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">
                 {group.category}
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 {group.items.map((skill) => (
                   <div
                     key={skill.name}
@@ -62,7 +65,7 @@ const Skills = () => {
                   >
                     <div className="text-3xl">{skill.icon}</div>
                     <div>
-                      <p className="text-sm font-semibold text-gray-800 mb-1">{skill.name}</p>
+                      <p className="text-xs font-semibold text-gray-800 mb-1">{skill.name}</p>
                       <span className={`text-xs font-semibold px-2 py-0.5 rounded border ${levelStyles[skill.level]}`}>
                         {skill.level}
                       </span>
