@@ -50,7 +50,7 @@ const Footer = () => {
             </p>
             <p className="text-gray-500 text-xs max-w-xs leading-relaxed">
               Senior Ruby on Rails Developer specializing in
-              Health Tech, FinTech &amp; EdTech products.
+              Health Tech &amp; FinTech products.
             </p>
           </div>
 
