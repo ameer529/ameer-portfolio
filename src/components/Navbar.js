@@ -32,7 +32,7 @@ const Navbar = () => {
               {link}
             </button>
           ))}
-          <
+          <a
             href="mailto:ameerhamza112281@gmail.com"
             className="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-5 py-2 rounded-lg text-sm transition-all duration-200 hover:shadow-lg hover:shadow-rose-600/25 inline-block"
           >
