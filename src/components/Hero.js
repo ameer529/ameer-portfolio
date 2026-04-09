@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="flex justify-center mb-8">
           <span className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-            Open to new opportunities
+            Hire Your Next Senior Rails Engineer
           </span>
         </div>
 
@@ -72,7 +72,7 @@ const Hero = () => {
             View Experience
           </button>
           <a
-            href="/resume.pdf"
+            href="/ameerhamzaROR.pdf"
             download="Ameer_Hamza_Resume.pdf"
             className="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600 border border-gray-300 hover:border-indigo-300 px-7 py-3 rounded-lg transition-all duration-200 font-medium"
           >

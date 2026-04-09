@@ -33,7 +33,7 @@ const Navbar = () => {
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href="/ameerhamzaROR.pdf"
             download="Ameer_Hamza_Resume.pdf"
             className="flex items-center gap-1.5 text-sm text-gray-300 hover:text-white transition-colors font-medium border border-gray-700 hover:border-gray-500 px-4 py-2 rounded-lg"
           >
@@ -72,7 +72,7 @@ const Navbar = () => {
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href="/ameerhamzaROR.pdf"
             download="Ameer_Hamza_Resume.pdf"
             className="flex items-center gap-1.5 text-sm text-gray-300 border border-gray-700 px-4 py-2 rounded-lg"
           >
