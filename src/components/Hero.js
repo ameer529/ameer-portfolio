@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="flex justify-center mb-8">
           <span className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-            Hire Your Next Senior Rails Engineer
+            Open to new opportunities
           </span>
         </div>
 
