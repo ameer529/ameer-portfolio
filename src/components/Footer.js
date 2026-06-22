@@ -10,7 +10,7 @@ const navLinks = [
 
 const socials = [
   { href: 'https://github.com/ameer529', icon: <FaGithub size={15} />, label: 'GitHub' },
-  { href: 'https://www.linkedin.com/in/ameer-hamza-43415b180/', icon: <FaLinkedin size={15} />, label: 'LinkedIn' },
+  { href: 'https://www.linkedin.com/in/ameerhamzaror/', icon: <FaLinkedin size={15} />, label: 'LinkedIn' },
   { href: 'mailto:ameerhamza112281@gmail.com', icon: <FaEnvelope size={15} />, label: 'Email' },
 ];
 
