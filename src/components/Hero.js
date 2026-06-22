@@ -56,11 +56,11 @@ const Hero = () => {
 
         {/* Bio from CV */}
         <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-          Full-Stack Engineer with <span className="text-gray-800 font-semibold">5 years of experience</span> in Ruby on Rails
-          building scalable web applications. Ambitious, detail-oriented, and an effective communicator
-          across <span className="text-gray-800 font-semibold">FinTech</span>,{' '}
-          <span className="text-gray-800 font-semibold">Health Tech</span>, and{' '}
-          <span className="text-gray-800 font-semibold">SaaS</span> products.
+          Senior Ruby on Rails engineer with 5 years building backend and integration
+          systems for <span className="text-gray-800 font-semibold">FinTech</span> and{' '}
+          <span className="text-gray-800 font-semibold">Health Tech</span> products: payment gateways, AI features, and
+          multi-tenant <span className="text-gray-800 font-semibold">SaaS</span> that stay reliable when money and sensitive data are moving
+          through them.
         </p>
 
         {/* CTAs */}
@@ -107,7 +107,7 @@ const Hero = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           {[
             { number: '5+', label: 'Years of Experience' },
-            { number: '2', label: 'Companies' },
+            { number: '70%', label: 'Faster dashboards' },
             { number: '5+', label: 'Projects Shipped' },
             { number: 'AWS', label: 'Cloud Infrastructure' },
           ].map((stat) => (

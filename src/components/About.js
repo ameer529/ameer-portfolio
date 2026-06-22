@@ -7,7 +7,7 @@ const highlights = [
   'Built and shipped FinTech payment platforms processing real transactions',
   'Integrated AWS (EC2, DynamoDB, API Gateway, CloudWatch, Lambda) on production systems',
   'Designed custom Ruby Gems to manage shared code and microservices',
-  'Improved code quality through TDD, CI/CD pipelines, and industry best practices',
+  'Improved code quality through CI/CD pipelines and code review.',
 ];
 
 const domains = ['Ruby on Rails', 'FinTech', 'Health Tech', 'SaaS', 'AWS', 'Full-Stack'];
@@ -32,7 +32,7 @@ const About = () => {
             <p className="text-gray-500 text-sm leading-7 mb-4">
               I'm a Full-Stack Engineer with 5 years of hands-on experience in Ruby on Rails,
               building and scaling web and mobile applications across FinTech and Health Tech domains.
-              I've worked in both associate lead and senior engineering roles — owning products
+              I've worked in both associate lead and senior engineering roles, owning products
               end-to-end from requirements gathering to production deployment.
             </p>
             <p className="text-gray-500 text-sm leading-7 mb-6">

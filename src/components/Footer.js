@@ -31,7 +31,7 @@ const Footer = () => {
             Have a project in mind?
           </h3>
           <p className="text-gray-400 text-sm mb-6 max-w-sm mx-auto">
-            I'm open to full-time roles, contracts, and consulting — let's talk.
+            I'm open to full-time roles, contracts, and consulting. Let's talk.
           </p>
           <a href="mailto:ameerhamza112281@gmail.com" className="btn-primary text-sm px-6 py-2.5">
             Send an Email

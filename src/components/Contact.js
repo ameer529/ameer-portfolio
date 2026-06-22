@@ -45,8 +45,7 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Open to Opportunities</h3>
             <p className="text-gray-500 text-sm mb-6">
-              Whether it's a full-time role, contract work, or a consultation —
-              reach out and let's talk.
+              Whether it's a full-time role, contract work, or a consultation. Reach out and let's talk.
             </p>
             <a href="mailto:ameerhamza112281@gmail.com" className="btn-primary">
               Send Me an Email

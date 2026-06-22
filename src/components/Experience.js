@@ -11,7 +11,6 @@ const experiences = [
       'Collaborated directly with TeamCare Dental\'s product team to translate business needs into scalable features',
       'Developed new functionalities and improved existing modules in a Ruby on Rails monolith with Stimulus and Turbo',
       'Diagnosed and resolved legacy system issues, improving platform stability and reducing reported bugs',
-      'Participated in daily stand-ups, sprint planning, and code reviews for efficient development cycles',
     ],
     tech: ['Ruby on Rails', 'Sidekiq', 'CI/CD', 'AWS (EC2, S3)', 'Stimulus', 'Turbo'],
   },
@@ -24,7 +23,7 @@ const experiences = [
     points: [
       'Served as Associate Lead for a team of 10, managing product development lifecycle from requirements to delivery',
       'Led a team of 7 engineers (backend, iOS, Android) providing technical guidance and regular client updates',
-      'Improved code quality and team efficiency by implementing TDD and industry best practices',
+      'Improved code quality and team efficiency through code review and CI/CD practices.',
       'Designed custom Ruby Gems to manage shared code between web and mobile backends',
     ],
     tech: ['Ruby on Rails', 'Sidekiq', 'Heroku', 'CI/CD', 'AWS (EC2, DynamoDB, API Gateway, Lambda)'],
