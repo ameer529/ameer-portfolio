@@ -23,7 +23,7 @@ const experiences = [
     points: [
       'Served as Associate Lead for a team of 10, managing product development lifecycle from requirements to delivery',
       'Led a team of 7 engineers (backend, iOS, Android) providing technical guidance and regular client updates',
-      'Improved code quality and team efficiency through code review and CI/CD practices.',
+      'Improved code quality and team efficiency through code review and CI/CD practices',
       'Designed custom Ruby Gems to manage shared code between web and mobile backends',
     ],
     tech: ['Ruby on Rails', 'Sidekiq', 'Heroku', 'CI/CD', 'AWS (EC2, DynamoDB, API Gateway, Lambda)'],

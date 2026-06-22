@@ -49,7 +49,7 @@ const Footer = () => {
               Ameer<span className="text-rose-600">.</span>
             </p>
             <p className="text-gray-500 text-xs max-w-xs leading-relaxed">
-              Senior Ruby on Rails Developer specializing in
+              Senior Ruby on Rails Engineer specializing in
               Health Tech &amp; FinTech products.
             </p>
           </div>
