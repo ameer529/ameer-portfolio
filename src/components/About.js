@@ -7,7 +7,7 @@ const highlights = [
   'Built and shipped FinTech payment platforms processing real transactions',
   'Integrated AWS (EC2, DynamoDB, API Gateway, CloudWatch, Lambda) on production systems',
   'Designed custom Ruby Gems to manage shared code and microservices',
-  'Improved code quality through CI/CD pipelines and code review.',
+  'Improved code quality through CI/CD pipelines and code review',
 ];
 
 const domains = ['Ruby on Rails', 'FinTech', 'Health Tech', 'SaaS', 'AWS', 'Full-Stack'];
