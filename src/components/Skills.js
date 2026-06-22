@@ -6,38 +6,36 @@ const skills = [
   {
     category: 'Core',
     items: [
-      { name: 'Ruby on Rails', icon: <FaGem className="text-rose-600" />, level: 'Expert' },
-      { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" />, level: 'Expert' },
-      { name: 'JavaScript', icon: <FaJs className="text-yellow-400" />, level: 'Advanced' },
-      { name: 'REST APIs', icon: <FaServer className="text-emerald-500" />, level: 'Expert' },
+      { name: 'Ruby on Rails', icon: <FaGem className="text-rose-600" /> },
+      { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" /> },
+      { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
+      { name: 'REST APIs', icon: <FaServer className="text-emerald-500" /> },
+      { name: 'API Integration', icon: <FaServer className="text-emerald-500" /> },
+      { name: 'Payment Integrations', icon: <FaServer className="text-emerald-600" /> },
+      { name: 'Multi-tenant SaaS', icon: <FaDatabase className="text-indigo-500" /> },
+      { name: 'AI / LLM Features', icon: <FaGem className="text-violet-600" /> },
     ],
   },
   {
     category: 'Frontend & Realtime',
     items: [
-      { name: 'Stimulus', icon: <FaJs className="text-sky-500" />, level: 'Advanced' },
-      { name: 'Turbo', icon: <SiTurbo className="text-orange-500" />, level: 'Advanced' },
-      { name: 'Hotwire', icon: <SiHotwire className="text-red-500" />, level: 'Advanced' },
+      { name: 'Stimulus', icon: <FaJs className="text-sky-500" /> },
+      { name: 'Turbo', icon: <SiTurbo className="text-orange-500" /> },
+      { name: 'Hotwire', icon: <SiHotwire className="text-red-500" /> },
     ],
   },
   {
     category: 'Infrastructure & Tools',
     items: [
-      { name: 'AWS', icon: <FaCloud className="text-amber-500" />, level: 'Advanced' },
-      { name: 'Sidekiq', icon: <SiSidekiq className="text-red-600" />, level: 'Expert' },
-      { name: 'Heroku', icon: <SiHeroku className="text-violet-500" />, level: 'Advanced' },
-      { name: 'CI/CD', icon: <FaCloud className="text-gray-500" />, level: 'Advanced' },
-      { name: 'GitHub', icon: <FaGithub className="text-gray-700" />, level: 'Advanced' },
-      { name: 'Kimurai', icon: <FaDatabase className="text-green-600" />, level: 'Intermediate' },
+      { name: 'AWS', icon: <FaCloud className="text-amber-500" /> },
+      { name: 'Sidekiq', icon: <SiSidekiq className="text-red-600" /> },
+      { name: 'Heroku', icon: <SiHeroku className="text-violet-500" /> },
+      { name: 'CI/CD', icon: <FaCloud className="text-gray-500" /> },
+      { name: 'GitHub', icon: <FaGithub className="text-gray-700" /> },
+      { name: 'Kimurai', icon: <FaDatabase className="text-green-600" /> },
     ],
   },
 ];
-
-const levelStyles = {
-  Expert: 'bg-rose-50 text-rose-700 border-rose-200',
-  Advanced: 'bg-indigo-50 text-indigo-700 border-indigo-200',
-  Intermediate: 'bg-gray-100 text-gray-500 border-gray-200',
-};
 
 const Skills = () => {
   return (
@@ -66,9 +64,6 @@ const Skills = () => {
                     <div className="text-3xl">{skill.icon}</div>
                     <div>
                       <p className="text-xs font-semibold text-gray-800 mb-1">{skill.name}</p>
-                      <span className={`text-xs font-semibold px-2 py-0.5 rounded border ${levelStyles[skill.level]}`}>
-                        {skill.level}
-                      </span>
                     </div>
                   </div>
                 ))}

@@ -50,9 +50,8 @@ const projects = [
       'Integrated multiple payment gateways: Visa, MasterCard, Stripe, Fluid Pay, PayNetworx',
       'Designed and developed a custom Ruby Gem (SDK) to manage microservices interactions',
       'Implemented RYVYL blockchain architecture synchronized with the existing Sequence blockchain',
-      'Adopted TDD to deliver high-quality features faster with minimal bugs',
     ],
-    tech: ['Ruby on Rails', 'Sidekiq', 'Heroku', 'AWS', 'Stripe', 'CI/CD', 'TDD'],
+    tech: ['Ruby on Rails', 'Sidekiq', 'Heroku', 'AWS', 'Stripe', 'CI/CD'],
     links: [
       { label: 'epayaix', url: 'https://portal.epayaix.com' },
     ],
