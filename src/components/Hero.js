@@ -87,7 +87,7 @@ const Hero = () => {
         <div className="flex items-center justify-center gap-3 mb-16">
           {[
             { href: 'https://github.com/ameer529', icon: <FaGithub size={18} />, label: 'GitHub' },
-            { href: 'https://www.linkedin.com/in/ameer-hamza-43415b180/', icon: <FaLinkedin size={18} />, label: 'LinkedIn' },
+            { href: 'https://www.linkedin.com/in/ameerhamzaror/', icon: <FaLinkedin size={18} />, label: 'LinkedIn' },
             { href: 'mailto:ameerhamza112281@gmail.com', icon: <FaEnvelope size={18} />, label: 'Email' },
           ].map(({ href, icon, label }) => (
             <a

@@ -18,8 +18,8 @@ const contacts = [
   },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/ameer-hamza-43415b180',
-    href: 'https://www.linkedin.com/in/ameer-hamza-43415b180/',
+    value: 'linkedin.com/in/ameerhamzaror',
+    href: 'https://www.linkedin.com/in/ameerhamzaror/',
     icon: <FaLinkedin />,
     desc: 'Connect professionally',
   },
