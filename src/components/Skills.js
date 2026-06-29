@@ -1,74 +1,60 @@
 import React from 'react';
-import { FaGem, FaGithub, FaDatabase, FaServer, FaCloud, FaJs } from 'react-icons/fa';
-import { SiPostgresql, SiSidekiq, SiHeroku, SiTurbo, SiHotwire } from 'react-icons/si';
+import Reveal from './Reveal';
+import SectionHeader from './SectionHeader';
 
-const skills = [
+const groups = [
   {
-    category: 'Core',
+    label: 'Core',
     items: [
-      { name: 'Ruby on Rails', icon: <FaGem className="text-rose-600" /> },
-      { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" /> },
-      { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
-      { name: 'REST APIs', icon: <FaServer className="text-emerald-500" /> },
-      { name: 'API Integration', icon: <FaServer className="text-emerald-500" /> },
-      { name: 'Payment Integrations', icon: <FaServer className="text-emerald-600" /> },
-      { name: 'Multi-tenant SaaS', icon: <FaDatabase className="text-indigo-500" /> },
-      { name: 'AI / LLM Features', icon: <FaGem className="text-violet-600" /> },
+      'Ruby on Rails',
+      'PostgreSQL',
+      'JavaScript',
+      'REST APIs',
+      'API Integration',
+      'Payment Integrations',
+      'Multi-tenant SaaS',
+      'AI / LLM Features',
     ],
   },
   {
-    category: 'Frontend & Realtime',
-    items: [
-      { name: 'Stimulus', icon: <FaJs className="text-sky-500" /> },
-      { name: 'Turbo', icon: <SiTurbo className="text-orange-500" /> },
-      { name: 'Hotwire', icon: <SiHotwire className="text-red-500" /> },
-    ],
+    label: 'Frontend & Realtime',
+    items: ['Hotwire', 'Turbo', 'Stimulus'],
   },
   {
-    category: 'Infrastructure & Tools',
-    items: [
-      { name: 'AWS', icon: <FaCloud className="text-amber-500" /> },
-      { name: 'Sidekiq', icon: <SiSidekiq className="text-red-600" /> },
-      { name: 'Heroku', icon: <SiHeroku className="text-violet-500" /> },
-      { name: 'CI/CD', icon: <FaCloud className="text-gray-500" /> },
-      { name: 'GitHub', icon: <FaGithub className="text-gray-700" /> },
-      { name: 'Kimurai', icon: <FaDatabase className="text-green-600" /> },
-    ],
+    label: 'Infrastructure & Tooling',
+    items: ['AWS', 'Sidekiq', 'Heroku', 'CI/CD', 'GitHub', 'Kimurai'],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="section-tag mb-3">Technical Skills</p>
-          <h2 className="section-title mb-4">Tools & Technologies</h2>
-          <p className="section-subtitle max-w-lg mx-auto">
-            The stack I've used in production across multiple companies and products.
-          </p>
-        </div>
+    <section id="skills" className="py-24 md:py-32 bg-paper-alt border-t border-line">
+      <div className="max-w-editorial mx-auto px-6">
+        <SectionHeader kicker="Toolkit" className="mb-14 max-w-3xl">
+          Tools &amp; <em className="italic text-accent">technologies</em>
+        </SectionHeader>
 
-        <div className="space-y-10">
-          {skills.map((group) => (
-            <div key={group.category}>
-              <h3 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">
-                {group.category}
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {group.items.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="card p-5 flex flex-col items-center text-center gap-3 hover:border-indigo-200 hover:-translate-y-1 transition-all duration-200 cursor-default"
+        <div className="border-t border-line-strong">
+          {groups.map((group, i) => (
+            <Reveal
+              key={group.label}
+              delay={i * 80}
+              className="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10 py-8 border-b border-line"
+            >
+              <p className="font-mono text-[12px] uppercase tracking-[0.1em] text-muted pt-1">
+                {group.label}
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center font-mono text-[12px] tracking-[0.04em] rounded-full border border-line px-4 py-1.5 text-ink bg-card hover:border-ink transition-colors"
                   >
-                    <div className="text-3xl">{skill.icon}</div>
-                    <div>
-                      <p className="text-xs font-semibold text-gray-800 mb-1">{skill.name}</p>
-                    </div>
-                  </div>
+                    {item}
+                  </span>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

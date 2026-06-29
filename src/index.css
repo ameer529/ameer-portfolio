@@ -5,31 +5,105 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
   body {
-    background-color: #ffffff;
-    color: #111827;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #f3efe6;
+    color: #3a342b;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    /* Faint dotted-grid texture */
+    background-image: radial-gradient(rgba(26, 22, 15, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: rgba(216, 69, 42, 0.22);
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/25 inline-block;
+  /* Section kicker: mono uppercase, e.g. 01 – About */
+  .kicker {
+    @apply font-mono text-[12px] uppercase tracking-[0.14em] text-accent-dark;
   }
-  .btn-outline {
-    @apply border border-gray-300 hover:border-indigo-400 text-gray-600 hover:text-indigo-600 font-medium px-6 py-2.5 rounded-lg transition-all duration-200 inline-block;
+
+  /* Big editorial section title */
+  .display {
+    @apply font-serif leading-[1.0] tracking-[-0.01em];
   }
-  .card {
-    @apply bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200;
+
+  /* Marker highlight on a key phrase */
+  .marker {
+    background: rgba(216, 69, 42, 0.22);
+    padding: 0 0.14em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
-  .section-tag {
-    @apply text-xs font-bold tracking-widest uppercase text-rose-600;
+
+  /* Paper card */
+  .ed-card {
+    @apply bg-card border border-line rounded-card;
   }
-  .section-title {
-    @apply text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight;
+
+  /* Pills / buttons */
+  .pill {
+    @apply inline-flex items-center justify-center gap-2 font-mono text-[12px] uppercase tracking-[0.1em] rounded-full px-5 py-2.5 transition-all duration-200;
   }
-  .section-subtitle {
-    @apply text-gray-500 text-base leading-relaxed;
+  .pill-ink {
+    @apply pill bg-ink text-paper hover:bg-accent;
+  }
+  .pill-outline {
+    @apply pill border border-line-strong text-ink hover:border-ink;
+  }
+
+  /* Chip */
+  .chip {
+    @apply inline-flex items-center font-mono text-[11px] uppercase tracking-[0.08em] rounded-full border border-line px-3 py-1 text-body;
+  }
+  .chip-accent {
+    @apply chip border-accent/40 text-accent-dark bg-accent/10;
+  }
+}
+
+@layer utilities {
+  /* Scroll-reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    will-change: opacity, transform;
+  }
+  .reveal-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Ticker marquee */
+  .marquee-track {
+    animation: marquee 32s linear infinite;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .marquee-track {
+    animation: none;
   }
 }
