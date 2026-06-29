@@ -6,14 +6,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#e11d48',
-        'primary-dark': '#be123c',
-        'dark-bg': '#0f0f0f',
-        'card-bg': '#1a1a1a',
-        'border-color': '#2a2a2a',
+        paper: '#f3efe6',
+        'paper-alt': '#ece7da',
+        card: '#faf8f2',
+        ink: '#1a160f',
+        muted: '#7c7468',
+        body: '#3a342b',
+        accent: '#d8452a',
+        'accent-dark': '#b23a22',
+        success: '#2e7d50',
+        line: 'rgba(26,22,15,0.12)',
+        'line-strong': 'rgba(26,22,15,0.18)',
+        'line-dark': 'rgba(243,239,230,0.14)',
       },
       fontFamily: {
-        sans: ['Inter', 'Segoe UI', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      },
+      borderRadius: {
+        card: '18px',
+      },
+      maxWidth: {
+        editorial: '1200px',
+      },
+      boxShadow: {
+        lift: '0 18px 40px -22px rgba(26,22,15,0.45)',
       },
     },
   },
