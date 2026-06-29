@@ -4,8 +4,10 @@ import SectionHeader from './SectionHeader';
 
 const experiences = [
   {
-    role: 'Senior Software Engineer',
-    company: 'Socketier',
+    role: 'Sr. Software Engineer',
+    company: 'TeamCare',
+    location: 'Faisalabad, Pakistan',
+    period: 'Apr 2025 – Present',
     domain: 'Health Tech',
     period: 'Apr 2025 – Present',
     place: 'Faisalabad, PK',
