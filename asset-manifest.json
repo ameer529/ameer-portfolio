@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ameer-portfolio/static/css/main.d7c6ec10.css",
+    "main.js": "/ameer-portfolio/static/js/main.89e5dedc.js",
+    "static/js/453.52181ae6.chunk.js": "/ameer-portfolio/static/js/453.52181ae6.chunk.js",
+    "index.html": "/ameer-portfolio/index.html",
+    "main.d7c6ec10.css.map": "/ameer-portfolio/static/css/main.d7c6ec10.css.map",
+    "main.89e5dedc.js.map": "/ameer-portfolio/static/js/main.89e5dedc.js.map",
+    "453.52181ae6.chunk.js.map": "/ameer-portfolio/static/js/453.52181ae6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7c6ec10.css",
+    "static/js/main.89e5dedc.js"
+  ]
+}
