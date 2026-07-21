@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const links = ['About', 'Skills', 'Experience', 'Projects', 'Contact'];
+  const links = ['About', 'Skills', 'Experience', 'Projects', 'Testimonials', 'Contact'];
 
   const scrollTo = (id) => {
     setMenuOpen(false);
