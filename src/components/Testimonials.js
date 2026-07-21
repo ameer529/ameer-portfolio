@@ -25,8 +25,8 @@ const testimonials = [
     ],
   },
   {
-    name: null,
-    initials: null,
+    name: 'Rajab Ali',
+    initials: 'RA',
     role: 'Scrum Master',
     company: 'QuickCard (Techcreatix)',
     context: 'FinTech payments platform',
