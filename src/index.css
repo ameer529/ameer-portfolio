@@ -33,3 +33,43 @@
     @apply text-gray-500 text-base leading-relaxed;
   }
 }
+
+@layer utilities {
+  .marquee-viewport {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+  }
+  .marquee-track {
+    animation: marquee-scroll 55s linear infinite;
+    will-change: transform;
+  }
+  .marquee-viewport:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

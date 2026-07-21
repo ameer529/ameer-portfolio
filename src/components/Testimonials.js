@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaQuoteLeft, FaUserTie } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const testimonials = [
   {
@@ -39,53 +39,129 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => {
+const Avatar = ({ initials, size = 'md' }) => {
+  const dim = size === 'lg' ? 'w-14 h-14 text-base' : 'w-11 h-11 text-sm';
   return (
-    <section id="testimonials" className="py-24 bg-gray-50">
+    <div
+      className={`${dim} rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold shadow-sm`}
+      style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)' }}
+    >
+      {initials}
+    </div>
+  );
+};
+
+const Card = ({ t, onOpen }) => (
+  <button
+    type="button"
+    onClick={onOpen}
+    className="group text-left w-[320px] sm:w-[380px] flex-shrink-0 card p-7 flex flex-col cursor-pointer hover:border-indigo-200 hover:-translate-y-1 transition-all duration-200"
+    style={{ height: '340px' }}
+  >
+    <FaQuoteLeft className="text-indigo-200 text-2xl mb-4 flex-shrink-0" />
+
+    <p className="text-gray-600 text-sm leading-relaxed line-clamp-6 flex-1">
+      {t.quote[0]}
+    </p>
+
+    <span className="text-xs font-semibold text-indigo-600 mt-3 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">
+      Read full recommendation ›
+    </span>
+
+    <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+      <Avatar initials={t.initials} />
+      <div className="min-w-0">
+        <p className="text-sm font-bold text-gray-900 truncate">{t.name}</p>
+        <p className="text-xs text-gray-400 font-medium truncate">
+          {t.role}, {t.company}
+        </p>
+      </div>
+    </div>
+  </button>
+);
+
+const Modal = ({ t, onClose }) => {
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onClose();
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-gray-900/50 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 md:p-10 relative"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-700 flex items-center justify-center transition-colors"
+        >
+          ✕
+        </button>
+
+        <FaQuoteLeft className="text-indigo-200 text-3xl mb-5" />
+
+        <div className="space-y-4 text-gray-600 text-[15px] leading-relaxed">
+          {t.quote.map((para, j) => (
+            <p key={j}>{para}</p>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
+          <Avatar initials={t.initials} size="lg" />
+          <div className="min-w-0">
+            <p className="text-base font-bold text-gray-900">{t.name}</p>
+            <p className="text-sm text-gray-400 font-medium">
+              {t.role}, {t.company}
+            </p>
+            {t.context && <p className="text-xs text-gray-400 mt-0.5">{t.context}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Testimonials = () => {
+  const [active, setActive] = useState(null);
+  // Duplicate the list so the marquee can loop seamlessly (translateX -50%).
+  const loop = [...testimonials, ...testimonials];
+
+  return (
+    <section id="testimonials" className="py-24 bg-gray-50 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <p className="section-tag mb-3">Testimonials</p>
           <h2 className="section-title mb-4">What People Say</h2>
           <p className="section-subtitle max-w-lg mx-auto">
             Recommendations from the people I've built products with across FinTech and Health Tech.
           </p>
         </div>
+      </div>
 
-        <div className="max-w-3xl mx-auto space-y-6">
-          {testimonials.map((t, i) => (
-            <figure
-              key={i}
-              className="card p-8 md:p-10 relative hover:border-indigo-200 transition-all duration-200"
-            >
-              <FaQuoteLeft className="text-indigo-200 text-3xl mb-5" />
-
-              <blockquote className="space-y-4 text-gray-600 text-[15px] leading-relaxed">
-                {t.quote.map((para, j) => (
-                  <p key={j}>{para}</p>
-                ))}
-              </blockquote>
-
-              <figcaption className="flex items-center gap-4 mt-7 pt-6 border-t border-gray-100">
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm shadow-sm"
-                  style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)' }}
-                >
-                  {t.initials ? t.initials : <FaUserTie className="text-lg" />}
-                </div>
-                <div className="min-w-0">
-                  <p className="text-sm font-bold text-gray-900">
-                    {t.name ? t.name : t.role}
-                  </p>
-                  <p className="text-xs text-gray-400 font-medium">
-                    {t.name ? `${t.role}, ${t.company}` : t.company}
-                    {t.context ? ` · ${t.context}` : ''}
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
+      {/* Marquee */}
+      <div className="marquee-viewport w-full overflow-hidden">
+        <div className="marquee-track flex gap-6 w-max px-6">
+          {loop.map((t, i) => (
+            <Card key={i} t={t} onOpen={() => setActive(t)} />
           ))}
         </div>
       </div>
+
+      <p className="text-center text-xs text-gray-400 mt-8">
+        Hover to pause · click a card to read the full recommendation
+      </p>
+
+      {active && <Modal t={active} onClose={() => setActive(null)} />}
     </section>
   );
 };
