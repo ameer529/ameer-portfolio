@@ -9,6 +9,7 @@ const Navbar = () => {
     setMenuOpen(false);
     const el = document.getElementById(id.toLowerCase());
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+    else window.location.href = '/#' + id.toLowerCase();
   };
 
   return (
@@ -32,9 +33,12 @@ const Navbar = () => {
               {link}
             </button>
           ))}
+          <a href="/resume" className="text-sm text-gray-300 hover:text-white transition-colors font-medium">
+            Resume
+          </a>
           <a
             href="mailto:ameerhamza112281@gmail.com"
-            className="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-5 py-2 rounded-lg text-sm transition-all duration-200 hover:shadow-lg hover:shadow-rose-600/25 inline-block"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2 rounded-lg text-sm transition-all duration-200 hover:shadow-lg hover:shadow-emerald-600/25 inline-block"
           >
             Hire Me
           </a>
@@ -61,9 +65,12 @@ const Navbar = () => {
               {link}
             </button>
           ))}
+          <a href="/resume" className="text-left text-gray-300 hover:text-white py-1 text-base font-medium">
+            Resume
+          </a>
           <a
             href="mailto:ameerhamza112281@gmail.com"
-            className="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-5 py-2 rounded-lg text-sm text-center transition-all duration-200 inline-block"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2 rounded-lg text-sm text-center transition-all duration-200 inline-block"
           >
             Hire Me
           </a>

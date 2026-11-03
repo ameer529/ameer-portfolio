@@ -18,6 +18,7 @@ const Footer = () => {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+    else window.location.href = '/#' + id;
   };
 
   return (

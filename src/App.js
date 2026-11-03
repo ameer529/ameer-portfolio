@@ -8,16 +8,28 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Resume from './components/Resume';
 import { FaArrowUp } from 'react-icons/fa';
 
 function App() {
   const [showTop, setShowTop] = useState(false);
+  const isResume = window.location.pathname.replace(/\/+$/, '') === '/resume';
 
   useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 400);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  if (isResume) {
+    return (
+      <div className="min-h-screen bg-white text-gray-900">
+        <Navbar />
+        <Resume />
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white text-gray-900">

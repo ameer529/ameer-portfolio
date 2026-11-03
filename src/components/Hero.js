@@ -72,14 +72,13 @@ const Hero = () => {
             View Experience
           </button>
           <a
-            href="/ameerhamzaROR.pdf"
-            download="Ameer_Hamza_Resume.pdf"
+            href="/resume"
             className="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600 border border-gray-300 hover:border-indigo-300 px-7 py-3 rounded-lg transition-all duration-200 font-medium"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6M7 4h7l5 5v11a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z" />
             </svg>
-            Download Resume
+            View Resume
           </a>
         </div>
 
