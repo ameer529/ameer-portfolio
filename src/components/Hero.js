@@ -47,7 +47,7 @@ const Hero = () => {
         </div>
 
         {/* Bio from CV */}
-        <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
           I'm a Senior Software Engineer with six years in{' '}
           <span className="text-gray-800 font-semibold">Ruby on Rails</span>. I build the integration-heavy parts of US{' '}
           <span className="text-gray-800 font-semibold">Health Tech</span> and{' '}
@@ -56,7 +56,7 @@ const Hero = () => {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
           <button className="btn-primary px-7 py-3 text-sm" onClick={() => scrollTo('contact')}>
             Get In Touch
           </button>
@@ -75,7 +75,7 @@ const Hero = () => {
         </div>
 
         {/* Social icons */}
-        <div className="flex items-center justify-center gap-3 mb-16">
+        <div className="flex items-center justify-center gap-3 mb-12">
           {[
             { href: 'https://github.com/ameer529', icon: <FaGithub size={18} />, label: 'GitHub' },
             { href: 'https://www.linkedin.com/in/ameerhamzaror/', icon: <FaLinkedin size={18} />, label: 'LinkedIn' },

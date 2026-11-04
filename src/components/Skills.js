@@ -51,22 +51,20 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-8">
           {skills.map((group) => (
             <div key={group.category}>
               <h3 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">
                 {group.category}
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              <div className="flex flex-wrap gap-3">
                 {group.items.map((skill) => (
                   <div
                     key={skill.name}
-                    className="card p-5 flex flex-col items-center text-center gap-3 hover:border-indigo-200 hover:-translate-y-1 transition-all duration-200 cursor-default"
+                    className="card px-4 py-2.5 flex items-center gap-2.5 hover:border-indigo-200 hover:-translate-y-0.5 transition-all duration-200 cursor-default"
                   >
-                    <div className="text-3xl">{skill.icon}</div>
-                    <div>
-                      <p className="text-xs font-semibold text-gray-800 mb-1">{skill.name}</p>
-                    </div>
+                    <span className="text-lg leading-none">{skill.icon}</span>
+                    <span className="text-sm font-semibold text-gray-800">{skill.name}</span>
                   </div>
                 ))}
               </div>

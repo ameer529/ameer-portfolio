@@ -104,7 +104,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
-            <div key={i} className="card p-6 flex flex-col">
+            <div key={i} className={`card p-6 flex flex-col ${i === 0 ? 'md:col-span-2' : ''}`}>
               {/* Header */}
               <div className="flex items-start justify-between gap-3 mb-3">
                 <div>

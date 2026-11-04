@@ -54,7 +54,7 @@ const Experience = () => {
 
           {experiences.map((exp, i) => (
             <div key={i} className="relative pl-12 mb-8 last:mb-0">
-              <div className="absolute left-0 top-6 w-8 h-8 bg-rose-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md shadow-rose-200">
+              <div className="absolute left-0 top-6 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md shadow-indigo-200">
                 {i + 1}
               </div>
 
