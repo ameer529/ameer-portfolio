@@ -24,14 +24,6 @@ const Hero = () => {
 
       <div className="max-w-5xl mx-auto px-6 w-full pt-28 pb-20 text-center relative z-10">
 
-        {/* Status badge */}
-        <div className="flex justify-center mb-8">
-          <span className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full">
-            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-            Open to new opportunities
-          </span>
-        </div>
-
         {/* Name */}
         <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 leading-none text-gray-900">
           Ameer{' '}
@@ -56,11 +48,11 @@ const Hero = () => {
 
         {/* Bio from CV */}
         <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-          Senior Software Engineer with 6 years building integration-heavy{' '}
-          <span className="text-gray-800 font-semibold">Ruby on Rails</span> SaaS for US{' '}
+          I'm a Senior Software Engineer with six years in{' '}
+          <span className="text-gray-800 font-semibold">Ruby on Rails</span>. I build the integration-heavy parts of US{' '}
           <span className="text-gray-800 font-semibold">Health Tech</span> and{' '}
-          <span className="text-gray-800 font-semibold">FinTech</span>: public APIs, third-party integrations and
-          AI-agent connectivity, owned end to end from design through production support.
+          <span className="text-gray-800 font-semibold">FinTech</span> SaaS: public APIs, third-party integrations and
+          AI agents. I own them from the first spec to the production incident.
         </p>
 
         {/* CTAs */}

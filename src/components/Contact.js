@@ -43,9 +43,9 @@ const Contact = () => {
             <div className="w-16 h-16 bg-indigo-100 border border-indigo-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <FaEnvelope className="text-indigo-600 text-2xl" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Open to Opportunities</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Let's talk</h3>
             <p className="text-gray-500 text-sm mb-6">
-              Whether it's a full-time role, contract work, or a consultation. Reach out and let's talk.
+              Got a Rails system that needs a steady pair of hands? Email is the fastest way to reach me.
             </p>
             <a href="mailto:ameerhamza112281@gmail.com" className="btn-primary">
               Send Me an Email

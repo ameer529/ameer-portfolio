@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
 
 const contacts = [
@@ -23,28 +23,28 @@ const jobs = [
   {
     title: 'Senior Software Engineer',
     company: 'TeamCare',
-    dates: 'Apr 2025 – Present',
+    dates: 'Apr 2025 - Present',
     meta: 'US dental practice-management SaaS · Remote',
     bullets: [
-      'Own the public partner REST API (v1 and v2): OpenAPI specs, developer docs and changelog, auth and rate limiting, partner onboarding and support.',
-      'Designed and built a Model Context Protocol (MCP) connector exposing application data to AI agents behind existing authorization and multi-tenancy.',
-      'Maintain integrations with five practice-management systems: incremental sync, cross-source deduplication, schedule normalization, data reconciliation.',
-      'Lead production incident response: triage, root cause, fix and SOC 2 documentation across job throughput, scheduler concurrency and sync reliability.',
-      'Shipped an AI assistant for performance insights, campaign analytics, payment capture with write-back to the practice system, review-request scheduling and CRM revenue sync.',
+      "Own the public partner API (v1 and v2): the OpenAPI specs, developer docs and changelog, auth and rate limits, and getting new partners connected.",
+      "Designed and built an MCP connector so AI agents can read practice data through the app's existing permissions and tenant boundaries.",
+      "Keep five practice-management integrations healthy: incremental sync, matching the same patient across sources, normalizing schedules and reconciling data when systems disagree.",
+      "First responder when production breaks: find the cause, fix it, write the SOC 2 incident report. Mostly background jobs, scheduler races and third-party sync.",
+      "Shipped an AI assistant for performance insights, campaign analytics, payment capture that writes back to the practice system, review-request scheduling and CRM revenue sync.",
     ],
     tech: ['Rails 8.1', 'Ruby 4', 'PostgreSQL', 'Sidekiq', 'Hotwire', 'AWS ECS', 'GitHub Actions'],
   },
   {
     title: 'Senior Software Engineer, Associate Lead',
     company: 'Techcreatix',
-    dates: 'Jan 2021 – Apr 2025',
+    dates: 'Jan 2021 - Apr 2025',
     meta: 'Lahore, Pakistan · Client: QuickCard / Nanokard, US fintech and blockchain payments',
     bullets: [
-      'Led 7 engineers (backend, iOS, Android) on the QuickCard mobile product and acted as Associate Lead for a 10-person team with direct US client updates.',
-      'Integrated five payment gateways (Visa, MasterCard, Stripe, Fluid Pay, PayNetworx), gift-card purchasing and bank withdrawals for production users.',
-      'Implemented RYVYL blockchain architecture synchronized with the existing Sequence chain with zero downtime.',
-      'Built two internal Ruby gems: a secure microservice SDK and a shared-code library for the web and mobile backends.',
-      'Stored encrypted card data behind AWS API Gateway and DynamoDB; cut dashboard load time 70% and system load 30% with a dedicated Sidekiq server.',
+      "Led a team of 7 (backend, iOS, Android) on the QuickCard mobile app and was Associate Lead for a 10-person team, including the regular updates to the US client.",
+      "Integrated five payment gateways (Visa, MasterCard, Stripe, Fluid Pay, PayNetworx), gift-card purchases and bank withdrawals, all handling real money.",
+      "Implemented the RYVYL blockchain layer and kept it in sync with the existing Sequence chain with no downtime.",
+      "Wrote two internal Ruby gems: an SDK for secure calls between microservices, and a shared-code library used by the web and mobile backends.",
+      "Put encrypted card data behind AWS API Gateway and DynamoDB. Cut dashboard load time by 70% and overall system load by 30% by moving jobs to a dedicated Sidekiq server.",
     ],
     tech: ['Rails', 'Heroku', 'Sidekiq', 'PostgreSQL', 'Sentry', 'AWS', 'GitHub CI/CD'],
   },
@@ -64,6 +64,14 @@ const SectionTitle = ({ children }) => (
 );
 
 const Resume = () => {
+  useEffect(() => {
+    document.title = 'Ameer Hamza | Resume, Senior Software Engineer (Ruby on Rails)';
+    const d = document.querySelector('meta[name="description"]');
+    if (d) d.setAttribute('content', 'Resume of Ameer Hamza: Senior Software Engineer with six years in Ruby on Rails, Health Tech and FinTech SaaS, APIs, integrations and AI agents.');
+    const c = document.querySelector('link[rel="canonical"]');
+    if (c) c.setAttribute('href', 'https://ameer-portfolio-eight.vercel.app/resume');
+  }, []);
+
   return (
   <section id="resume" className="bg-white text-gray-900 text-[14px] leading-relaxed pt-28 pb-20 px-6">
     <div className="max-w-[920px] mx-auto flex flex-wrap items-end justify-between gap-4 mb-8 print:hidden">
@@ -92,7 +100,7 @@ const Resume = () => {
             Senior Software Engineer <span className="font-medium text-gray-500">· Ruby on Rails</span>
           </p>
           <p className="tagline mt-3 max-w-[640px] text-gray-500">
-            Integration-heavy SaaS for US healthcare and fintech: public APIs, third-party integrations and AI-agent connectivity, owned end to end from design through production support.
+            I build the integration-heavy parts of US healthcare and fintech SaaS: public APIs, third-party integrations and AI agents, and I own them from design through production support.
           </p>
           <ul className="flex flex-wrap gap-x-[18px] gap-y-2 mt-4 text-[13px] text-gray-700">
             {contacts.map((c) => (
@@ -123,7 +131,7 @@ const Resume = () => {
             <SectionTitle>Education</SectionTitle>
             <strong className="block text-[13px]">BS Software Engineering</strong>
             <span className="block text-[12.5px] text-gray-500">PUCIT, University of the Punjab, Lahore</span>
-            <span className="block text-[12.5px] text-gray-500">2016 – 2020</span>
+            <span className="block text-[12.5px] text-gray-500">2016 - 2020</span>
           </section>
 
           <section>
@@ -139,7 +147,7 @@ const Resume = () => {
           <section className="block mb-6">
             <SectionTitle>Summary</SectionTitle>
             <p className="text-gray-700 m-0">
-              Senior Software Engineer with 6 years building and operating integration-heavy SaaS in Ruby on Rails for US healthcare (HIPAA, SOC 2) and US fintech. Owns public REST APIs, third-party integrations and AI-agent connectivity end to end, from design and documentation through production support and incident response. Led a team of 7 engineers across backend, iOS and Android.
+              Senior Software Engineer with six years building and running integration-heavy Rails SaaS for US healthcare (HIPAA, SOC 2) and fintech. Owns public APIs, third-party integrations and AI-agent connectivity end to end, from the OpenAPI spec to the incident report. Earlier, led a team of 7 across backend, iOS and Android.
             </p>
           </section>
 

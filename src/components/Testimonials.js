@@ -133,7 +133,7 @@ const Modal = ({ t, onClose }) => {
 
 const Testimonials = () => {
   const [active, setActive] = useState(null);
-  // Duplicate the list so the marquee can loop seamlessly (translateX -50%).
+  // Duplicate the list so the marquee loops without a gap (translateX -50%).
   const loop = [...testimonials, ...testimonials];
 
   return (

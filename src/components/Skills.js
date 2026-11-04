@@ -14,6 +14,8 @@ const skills = [
       { name: 'Payment Integrations', icon: <FaServer className="text-emerald-600" /> },
       { name: 'Multi-tenant SaaS', icon: <FaDatabase className="text-indigo-500" /> },
       { name: 'AI / LLM Features', icon: <FaGem className="text-violet-600" /> },
+      { name: 'MCP Servers', icon: <FaServer className="text-violet-500" /> },
+      { name: 'Node.js', icon: <FaJs className="text-green-600" /> },
     ],
   },
   {

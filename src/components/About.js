@@ -2,12 +2,12 @@ import React from 'react';
 import { FaCheckCircle, FaGraduationCap } from 'react-icons/fa';
 
 const highlights = [
-  'Served as Associate Lead for a team of 10 engineers across full product lifecycle',
-  'Led a team of 7 engineers in mobile application development (iOS, Android, Backend)',
-  'Built and shipped FinTech payment platforms processing real transactions',
-  'Integrated AWS (EC2, DynamoDB, API Gateway, CloudWatch, Lambda) on production systems',
-  'Designed custom Ruby Gems to manage shared code and microservices',
-  'Improved code quality through CI/CD pipelines and code review',
+  'Associate Lead for a 10-person team, from requirements through release',
+  'Led 7 engineers across backend, iOS and Android on a fintech mobile app',
+  'Shipped payment flows that move real money through five gateways',
+  'Run production on AWS: ECS, EC2, DynamoDB, API Gateway, Lambda, CloudWatch',
+  'Wrote internal Ruby gems for shared code and microservice calls',
+  'Keep quality up with code review, CI and honest incident reports',
 ];
 
 const domains = ['Ruby on Rails', 'FinTech', 'Health Tech', 'SaaS', 'AWS', 'Full-Stack'];
@@ -18,10 +18,10 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="section-tag mb-3">About Me</p>
-          <h2 className="section-title mb-4">Ambitious. Detail-Oriented.<br />Result-Driven.</h2>
+          <h2 className="section-title mb-4">I build the parts<br />where mistakes are expensive.</h2>
           <p className="section-subtitle max-w-xl mx-auto">
-            A full-stack engineer with a strong Ruby on Rails foundation, passionate about
-            building reliable systems and leading teams to deliver on time.
+            Payment gateways, practice-management integrations, public APIs and AI agents,
+            for US Health Tech and FinTech SaaS that can't afford to be wrong.
           </p>
         </div>
 
@@ -30,15 +30,15 @@ const About = () => {
           <div className="card p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-4">My Story</h3>
             <p className="text-gray-500 text-sm leading-7 mb-4">
-              I'm a Senior Software Engineer with 6 years of hands-on experience in Ruby on Rails,
-              building and operating integration-heavy SaaS for US Health Tech and FinTech products.
-              I own public REST APIs, third-party integrations and AI-agent connectivity end to end,
-              and I've led a team of 7 engineers across backend, iOS and Android.
+              I'm a Senior Software Engineer with six years in Ruby on Rails. I've spent that time on
+              integration-heavy SaaS for US Health Tech and FinTech: payment gateways, practice-management
+              systems, public APIs and, lately, AI agents. I own that work end to end, from the OpenAPI spec
+              to the incident report. Earlier I led a team of 7 across backend, iOS and Android.
             </p>
             <p className="text-gray-500 text-sm leading-7 mb-6">
-              I take pride in clean, maintainable code and a collaborative approach to engineering.
-              Whether it's architecting a new feature, resolving legacy issues, or mentoring teammates,
-              I show up focused on impact.
+              I like clean code, but I care more about whether the thing still works when a sync job
+              fails at 2am. I'd rather fix the root cause than patch the symptom, and when something
+              breaks I tell the customer what changed in plain words.
             </p>
 
             <h4 className="text-sm font-semibold text-gray-700 mb-3">Domain Expertise</h4>
@@ -59,7 +59,7 @@ const About = () => {
                 <div>
                   <p className="text-sm font-bold text-gray-800">BS Software Engineering</p>
                   <p className="text-xs text-indigo-600 font-medium">PUCIT</p>
-                  <p className="text-xs text-gray-400 mt-0.5">Sep 2016 – Jul 2020</p>
+                  <p className="text-xs text-gray-400 mt-0.5">Sep 2016 - Jul 2020</p>
                 </div>
               </div>
             </div>
