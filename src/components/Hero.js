@@ -56,11 +56,11 @@ const Hero = () => {
 
         {/* Bio from CV */}
         <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-          Senior Ruby on Rails engineer with 5 years building backend and integration
-          systems for <span className="text-gray-800 font-semibold">FinTech</span> and{' '}
-          <span className="text-gray-800 font-semibold">Health Tech</span> products: payment gateways, AI features, and
-          multi-tenant <span className="text-gray-800 font-semibold">SaaS</span> that stay reliable when money and sensitive data are moving
-          through them.
+          Senior Software Engineer with 6 years building integration-heavy{' '}
+          <span className="text-gray-800 font-semibold">Ruby on Rails</span> SaaS for US{' '}
+          <span className="text-gray-800 font-semibold">Health Tech</span> and{' '}
+          <span className="text-gray-800 font-semibold">FinTech</span>: public APIs, third-party integrations and
+          AI-agent connectivity, owned end to end from design through production support.
         </p>
 
         {/* CTAs */}
@@ -105,9 +105,9 @@ const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           {[
-            { number: '5+', label: 'Years of Experience' },
+            { number: '6', label: 'Years of Experience' },
             { number: '70%', label: 'Faster dashboards' },
-            { number: '5+', label: 'Projects Shipped' },
+            { number: '5', label: 'Payment Gateways Integrated' },
             { number: 'AWS', label: 'Cloud Infrastructure' },
           ].map((stat) => (
             <div key={stat.label} className="bg-white py-5 px-4 text-center hover:bg-indigo-50 transition-colors">

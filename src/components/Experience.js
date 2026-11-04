@@ -2,20 +2,21 @@ import React from 'react';
 
 const experiences = [
   {
-    role: 'Sr. Software Engineer',
+    role: 'Senior Software Engineer',
     company: 'TeamCare',
     location: 'Faisalabad, Pakistan',
     period: 'Apr 2025 – Present',
     domain: 'Health Tech',
     points: [
-      'Collaborated directly with TeamCare Dental\'s product team to translate business needs into scalable features',
-      'Developed new functionalities and improved existing modules in a Ruby on Rails monolith with Stimulus and Turbo',
-      'Diagnosed and resolved legacy system issues, improving platform stability and reducing reported bugs',
+      'Own the public partner REST API (v1 and v2): OpenAPI specs, developer docs and changelog, auth and rate limiting, partner onboarding',
+      'Designed and built a Model Context Protocol (MCP) connector exposing application data to AI agents behind existing authorization and multi-tenancy',
+      'Maintain integrations with five practice-management systems: incremental sync, cross-source deduplication, schedule normalization, data reconciliation',
+      'Lead production incident response: triage, root cause, fix and SOC 2 documentation across job throughput, scheduler concurrency and sync reliability',
     ],
-    tech: ['Ruby on Rails', 'Sidekiq', 'CI/CD', 'AWS (EC2, S3)', 'Stimulus', 'Turbo'],
+    tech: ['Ruby on Rails 8.1', 'PostgreSQL', 'Sidekiq', 'Hotwire', 'AWS ECS', 'GitHub Actions'],
   },
   {
-    role: 'Sr. Software Engineer',
+    role: 'Senior Software Engineer, Associate Lead',
     company: 'Techcreatix',
     location: 'Lahore, Pakistan',
     period: 'Jan 2021 – Apr 2025',
@@ -23,8 +24,9 @@ const experiences = [
     points: [
       'Served as Associate Lead for a team of 10, managing product development lifecycle from requirements to delivery',
       'Led a team of 7 engineers (backend, iOS, Android) providing technical guidance and regular client updates',
-      'Improved code quality and team efficiency through code review and CI/CD practices',
-      'Designed custom Ruby Gems to manage shared code between web and mobile backends',
+      'Integrated five payment gateways (Visa, MasterCard, Stripe, Fluid Pay, PayNetworx), gift-card purchasing and bank withdrawals',
+      'Implemented RYVYL blockchain architecture synchronized with the existing Sequence chain with zero downtime',
+      'Built two internal Ruby gems: a secure microservice SDK and a shared-code library for the web and mobile backends',
     ],
     tech: ['Ruby on Rails', 'Sidekiq', 'Heroku', 'CI/CD', 'AWS (EC2, DynamoDB, API Gateway, Lambda)'],
   },
@@ -43,7 +45,7 @@ const Experience = () => {
           <p className="section-tag mb-3">Experience</p>
           <h2 className="section-title mb-4">Professional Journey</h2>
           <p className="section-subtitle max-w-lg mx-auto">
-            5+ years building production-grade systems across regulated industries.
+            6 years building production-grade systems across regulated industries.
           </p>
         </div>
 
