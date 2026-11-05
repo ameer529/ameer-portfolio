@@ -28,25 +28,50 @@ const jobs = [
     bullets: [
       "Own the public partner API (v1 and v2): the OpenAPI specs, developer docs and changelog, auth and rate limits, and getting new partners connected.",
       "Designed and built an MCP connector so AI agents can read practice data through the app's existing permissions and tenant boundaries.",
+      "Upgraded the platform from Rails 6 and Ruby 2.7 to Rails 8.1 and Ruby 4 in two weeks ahead of a SOC 2 audit, scaffold-and-port rather than incremental, with no feature freeze.",
+      "Took the app from 61 to 88 on a partner security scorecard, clearing the 80 threshold that blocked an integration: Content Security Policy, missing response headers, forced HTTPS, and a clickjacking header that had been inert for years.",
       "Keep five practice-management integrations healthy: incremental sync, matching the same patient across sources, normalizing schedules and reconciling data when systems disagree.",
+      "Built a CRM sync for practice schedules where repeated runs cannot duplicate records: each patient resolves to one contact and each visit to its own opportunity in the right pipeline stage.",
+      "Shipped an AI feature that drafts replies to patient reviews, with guardrails against confirming patient status, naming treatments or people, and tone routed by star rating.",
       "First responder when production breaks: find the cause, fix it, write the SOC 2 incident report. Mostly background jobs, scheduler races and third-party sync.",
-      "Shipped an AI assistant for performance insights, campaign analytics, payment capture that writes back to the practice system, review-request scheduling and CRM revenue sync.",
     ],
     tech: ['Rails 8.1', 'Ruby 4', 'PostgreSQL', 'Sidekiq', 'Hotwire', 'AWS ECS', 'GitHub Actions'],
   },
   {
     title: 'Senior Software Engineer, Associate Lead',
     company: 'Techcreatix',
-    dates: 'Jan 2021 - Apr 2025',
+    dates: 'Jul 2023 - Mar 2025',
     meta: 'Lahore, Pakistan · Client: QuickCard / Nanokard, US fintech and blockchain payments',
     bullets: [
       "Led a team of 7 (backend, iOS, Android) on the QuickCard mobile app and was Associate Lead for a 10-person team, including the regular updates to the US client.",
       "Integrated five payment gateways (Visa, MasterCard, Stripe, Fluid Pay, PayNetworx), gift-card purchases and bank withdrawals, all handling real money.",
-      "Implemented the RYVYL blockchain layer and kept it in sync with the existing Sequence chain with no downtime.",
       "Wrote two internal Ruby gems: an SDK for secure calls between microservices, and a shared-code library used by the web and mobile backends.",
-      "Put encrypted card data behind AWS API Gateway and DynamoDB. Cut dashboard load time by 70% and overall system load by 30% by moving jobs to a dedicated Sidekiq server.",
+      "Put encrypted card data behind AWS API Gateway and DynamoDB; owned Sidekiq job processing, Sentry monitoring and the CI/CD pipeline on AWS.",
     ],
     tech: ['Rails', 'Heroku', 'Sidekiq', 'PostgreSQL', 'Sentry', 'AWS', 'GitHub CI/CD'],
+  },
+  {
+    title: 'Software Engineer',
+    company: 'Techcreatix',
+    dates: 'Apr 2021 - Jun 2023',
+    meta: 'Lahore, Pakistan · QuickCard web and mobile platforms',
+    bullets: [
+      "Implemented the RYVYL blockchain layer and kept it in sync with the existing Sequence chain with no downtime.",
+      "Cut dashboard load time by 70% and overall system load by 30% by moving jobs to a dedicated Sidekiq server.",
+      "Built Etyme, a freelancer marketplace: real-time chat, authentication and role-based access for freelancers and companies.",
+      "Built a Kimurai-based crawler with an Instagram-style feed for the scraped content.",
+    ],
+    tech: ['Rails', 'Sidekiq', 'PostgreSQL', 'Heroku'],
+  },
+  {
+    title: 'Ruby on Rails Intern',
+    company: 'Techcreatix',
+    dates: 'Jan 2021 - Mar 2021',
+    meta: 'Lahore, Pakistan',
+    bullets: [
+      "First production Rails work on the QuickCard web platform.",
+    ],
+    tech: ['Rails'],
   },
 ];
 
@@ -154,7 +179,7 @@ const Resume = () => {
           <section>
             <SectionTitle>Experience</SectionTitle>
             {jobs.map((job, idx) => (
-              <article key={job.company} className="job relative pl-[22px] mb-6 last:mb-0 print:break-inside-avoid">
+              <article key={job.title + job.company} className="job relative pl-[22px] mb-6 last:mb-0 print:break-inside-avoid">
                 <span className="absolute left-1 top-[7px] w-[9px] h-[9px] rounded-full bg-white border-2 border-indigo-600" />
                 {idx < jobs.length - 1 && <span className="absolute left-2 top-5 -bottom-6 w-px bg-gray-200" />}
                 <div className="flex flex-wrap items-baseline justify-between gap-3">

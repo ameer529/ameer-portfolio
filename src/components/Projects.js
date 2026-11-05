@@ -11,8 +11,9 @@ const projects = [
     points: [
       "Own the public partner API (v1 and v2): the OpenAPI specs, developer docs and changelog, auth and rate limits, and getting new partners connected.",
       "Designed and built an MCP connector so AI agents can read practice data through the app's existing permissions and tenant boundaries.",
+      "Upgraded the platform from Rails 6 and Ruby 2.7 to Rails 8.1 and Ruby 4 in two weeks ahead of a SOC 2 audit, scaffold-and-port rather than incremental, with no feature freeze.",
+      "Took the app from 61 to 88 on a partner security scorecard, clearing the 80 threshold that blocked an integration: Content Security Policy, missing response headers, forced HTTPS, and a clickjacking header that had been inert for years.",
       "Keep five practice-management integrations healthy: incremental sync, matching the same patient across sources, normalizing schedules and reconciling data when systems disagree.",
-      "First responder when production breaks: find the cause, fix it, write the SOC 2 incident report. Mostly background jobs, scheduler races and third-party sync.",
       "Shipped an AI assistant for performance insights, campaign analytics, payment capture that writes back to the practice system, review-request scheduling and CRM revenue sync."
     ],
     tech: ['Ruby on Rails', 'PostgreSQL', 'Sidekiq', 'Hotwire', 'OpenAPI', 'MCP', 'AWS ECS'],
