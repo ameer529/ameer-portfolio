@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaBriefcase } from 'react-icons/fa';
 
 const contacts = [
   { icon: <FaMapMarkerAlt />, text: 'Faisalabad, Pakistan' },
@@ -7,7 +7,7 @@ const contacts = [
   { icon: <FaEnvelope />, text: 'ameerhamza112281@gmail.com', href: 'mailto:ameerhamza112281@gmail.com' },
   { icon: <FaLinkedin />, text: 'linkedin.com/in/ameerhamzaror', href: 'https://www.linkedin.com/in/ameerhamzaror/' },
   { icon: <FaGithub />, text: 'github.com/ameer529', href: 'https://github.com/ameer529' },
-  { icon: <FaGlobe />, text: 'ameer-portfolio-eight.vercel.app', href: 'https://ameer-portfolio-eight.vercel.app/' },
+  { icon: <FaBriefcase />, text: 'Portfolio', href: 'https://ameer-portfolio-eight.vercel.app/' },
 ];
 
 const skills = [
