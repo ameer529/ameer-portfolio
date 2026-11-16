@@ -105,6 +105,12 @@ const Resume = () => {
         <h2 className="section-title">My resume</h2>
         <p className="section-subtitle mt-1">Senior Software Engineer · Ruby on Rails</p>
       </div>
+      <a href="/ameerhamzaROR.pdf" download="Ameer_Hamza_Resume.pdf" className="btn-primary flex items-center gap-2 text-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+        </svg>
+        Download Resume
+      </a>
     </div>
 
     <main className="max-w-[920px] mx-auto bg-white border border-gray-200 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(17,24,39,0.06)] print:max-w-none print:m-0 print:border-0 print:rounded-none print:shadow-none">
@@ -143,7 +149,7 @@ const Resume = () => {
           <section className="block mb-6">
             <SectionTitle>Skills</SectionTitle>
             {skills.map((s) => (
-              <div key={s.group} className="skill-group mb-3.5">
+              <div key={s.group} className="skill-group mb-3.5 print:break-inside-avoid">
                 <h3 className="text-[12px] font-semibold text-gray-700 mb-1.5">{s.group}</h3>
                 <div className="flex flex-wrap gap-[5px]">
                   {s.items.map((i) => <Chip key={i} accent={s.accent}>{i}</Chip>)}
@@ -179,10 +185,10 @@ const Resume = () => {
           <section>
             <SectionTitle>Experience</SectionTitle>
             {jobs.map((job, idx) => (
-              <article key={job.title + job.company} className="job relative pl-[22px] mb-6 last:mb-0 print:break-inside-avoid">
+              <article key={job.title + job.company} className="job relative pl-[22px] mb-6 last:mb-0">
                 <span className="absolute left-1 top-[7px] w-[9px] h-[9px] rounded-full bg-white border-2 border-indigo-600" />
                 {idx < jobs.length - 1 && <span className="absolute left-2 top-5 -bottom-6 w-px bg-gray-200" />}
-                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <div className="flex flex-wrap items-baseline justify-between gap-3 print:break-after-avoid">
                   <h3 className="text-[15.5px] font-bold m-0">
                     {job.title} <span className="font-medium text-gray-500 text-[13px]">· {job.company}</span>
                   </h3>
@@ -190,7 +196,7 @@ const Resume = () => {
                 </div>
                 <p className="mt-0.5 mb-2 text-[12.5px] text-gray-500">{job.meta}</p>
                 <ul className="list-disc pl-4 m-0 text-gray-700 marker:text-indigo-600">
-                  {job.bullets.map((b) => <li key={b} className="my-1 pl-0.5">{b}</li>)}
+                  {job.bullets.map((b) => <li key={b} className="my-1 pl-0.5 print:break-inside-avoid">{b}</li>)}
                 </ul>
                 <div className="flex flex-wrap gap-[5px] mt-2.5">
                   {job.tech.map((t) => <Chip key={t}>{t}</Chip>)}
@@ -201,7 +207,7 @@ const Resume = () => {
         </div>
       </div>
 
-      <footer className="flex flex-wrap justify-between gap-1.5 px-10 py-3.5 border-t border-gray-200 text-[12px] text-gray-500 print:px-6 print:py-2">
+      <footer className="flex flex-wrap justify-between gap-1.5 px-10 py-3.5 border-t border-gray-200 text-[12px] text-gray-500 print:hidden">
         <span>Ameer Hamza · Senior Software Engineer (Ruby on Rails)</span>
         <span>ameerhamza112281@gmail.com · +92 322 6518570</span>
       </footer>

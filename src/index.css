@@ -86,4 +86,14 @@
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
+  nav, footer {
+    display: none !important;
+  }
+  #resume {
+    padding: 0 !important;
+    font-size: 12.5px !important;
+  }
+  #resume h2 {
+    break-after: avoid;
+  }
 }
